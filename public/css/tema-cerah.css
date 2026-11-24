@@ -1,0 +1,247 @@
+/* ==========================================================================
+   LUNORA LAUNDRY — Tema Cerah (v4: bersih, warna solid, tanpa dekorasi)
+   Biru sebagai warna utama, kuning sebagai aksen. Dimuat setelah CSS lain.
+   ========================================================================== */
+:root{
+  --ink:#14244B; --navy:#1E3A8A; --teal:#2F6BFF; --teal-deep:#1E4FD6; --teal-mist:#D6E8FF;
+  --gold:#FFC93C; --gold-deep:#F5A30F; --bg:#F5F9FF; --mint:#E4F0FF; --mint-deep:#D3E4FF;
+  --line:#D9E6F8; --muted:#5B6F94;
+  --blue:#2F6BFF; --blue-deep:#1E4FD6; --sky:#38BDF8; --indigo:#6366F1; --aqua:#2DD4BF; --sun:#FFC93C;
+}
+body{background:var(--bg)}
+
+/* ---------- Beranda ---------- */
+.nav{border-bottom:3px solid var(--blue)}
+.nav-links a.active,.nav-links a:hover{color:var(--blue-deep)}
+.btn-dark{background:var(--blue);color:#fff;box-shadow:0 8px 18px -10px rgba(47,107,255,.7)}
+.btn-dark:hover{background:var(--blue-deep)}
+.btn-primary{background:var(--sun);color:#3a2600;box-shadow:0 8px 18px -10px rgba(245,163,15,.6)}
+.btn-primary:hover{background:#FFD35C}
+.btn-outline-dark{border-color:var(--blue);color:var(--blue)}
+.btn-outline-dark:hover{background:var(--blue);color:#fff}
+
+.hero{background:#E3EFFF}
+.hero h1 em{color:var(--blue)}
+.hero-photo-frame{border:6px solid #fff;box-shadow:0 20px 40px -20px rgba(30,58,138,.5)}
+.hero-sticky-note{background:#FFF1B8;color:#7a4a00}
+.stats-float{background:#fff;border:2px solid #D3E4FF}
+
+.section-alt{background:#fff}
+#layanan{background:#F5F9FF}
+#daftar-harga{background:#EAF3FF}
+#alur{background:#FFF6DC}
+#tentang{background:#F5F9FF}
+#testimoni{background:#EAF3FF}
+.kicker{background:var(--blue);color:#fff;border-radius:999px;display:inline-block;padding:.35em 1.1em}
+.section h2{color:var(--navy)}
+
+.service-row,.price-card{border:1px solid #D3E4FF;border-left:6px solid var(--blue);box-shadow:0 8px 20px -14px rgba(30,58,138,.4)}
+.service-icon,.price-card-icon{background:var(--blue)!important;color:#fff!important}
+.service-price,.price-card-value strong{color:var(--blue-deep)}
+
+.step-card{border:0;border-top:6px solid var(--sky);box-shadow:0 10px 22px -16px rgba(30,58,138,.45);text-align:center}
+.step-card:nth-child(4n+1){border-top-color:var(--sky);background:#E6F6FF}
+.step-card:nth-child(4n+2){border-top-color:var(--indigo);background:#EEF0FF}
+.step-card:nth-child(4n+3){border-top-color:var(--aqua);background:#E0FAF5}
+.step-card:nth-child(4n+4){border-top-color:var(--sun);background:#FFF6D6}
+.step-mark{width:38px;height:38px;margin:0 auto .6em;border-radius:50%;background:var(--blue);color:#fff;-webkit-text-stroke:0;font-size:1.05rem;display:grid;place-items:center}
+.step-card:nth-child(4n+4) .step-mark{background:var(--sun);color:#3a2600}
+#alur .step-card::before{content:"";display:block;height:84px;margin-bottom:.8em;background:center/contain no-repeat}
+#alur .step-card:nth-child(1)::before{background-image:url(../images/setrika.svg)}
+#alur .step-card:nth-child(2)::before{background-image:url(../images/keranjang.svg)}
+#alur .step-card:nth-child(3)::before{background-image:url(../images/mesin-cuci.svg)}
+#alur .step-card:nth-child(4)::before{background-image:url(../images/kurir.svg)}
+
+.testi{border:1px solid #D3E4FF;box-shadow:0 8px 20px -14px rgba(30,58,138,.4)}
+.testi:nth-child(3n+1){background:#E6F4FF}
+.testi:nth-child(3n+2){background:#EEF0FF}
+.testi:nth-child(3n+3){background:#FFF6D6}
+.testi:nth-child(3n+1) .avatar{background:var(--sky)}
+.testi:nth-child(3n+2) .avatar{background:var(--indigo)}
+.testi:nth-child(3n+3) .avatar{background:var(--gold-deep)}
+
+/* Banner ajakan: biru lembut */
+body .cta-band{background:#DCEBFF;border:1px solid #C3D9F5;color:#85a2f1}
+body .cta-band h2{color:#1E3A8A}
+body .cta-band p{color:#4C6490}
+
+/* ---------- Login ---------- */
+:root:has(.auth-side){--deep:#1E3A8A;--deep-light:#2F6BFF;--teal:#2F6BFF;--mint:#E4F0FF;--mint-light:#F3F8FF;--border:#D9E6F8;--text:#14244B;--muted:#5B6F94}
+:root:has(.auth-side) body{background:#F3F8FF}
+.auth-side::before,.auth-side::after{display:none!important}
+.auth-tabs .active,.role-toggle .active{background:var(--blue);color:#fff}
+
+/* ---------- Dashboard user & admin ---------- */
+:root:has(.nav-btn){--green:#2F6BFF;--green-dark:#1E4FD6;--green-light:#1E4FD6;--mint:#FFE17A;--bg:#F3F7FF;--text:#14244B;--muted:#5B6F94;--line:#DCE8F7;--gold:#F5A30F}
+:root:has(.nav-item){--lunora-green:#2F6BFF;--lunora-green-light:#1E4FD6;--lunora-gold:#F5A30F;--lunora-bg:#F3F7FF;--lunora-border:#DCE8F7;--lunora-text:#14244B;--lunora-muted:#5B6F94}
+:root:has(.nav-btn) body,:root:has(.nav-item) body{background:#F3F7FF}
+
+
+h1,.main-head h1{color:#1E3A8A}
+.topbar{background:#fff;border-bottom:1px solid #DCE8F7}
+.stat,.stat-card{border:0;border-top:5px solid #38BDF8;box-shadow:0 8px 20px -14px rgba(30,58,138,.45)}
+.stat:nth-child(4n+1),.stat-card:nth-child(4n+1){background:#E6F6FF;border-top-color:#38BDF8}
+.stat:nth-child(4n+2),.stat-card:nth-child(4n+2){background:#EEF0FF;border-top-color:#6366F1}
+.stat:nth-child(4n+3),.stat-card:nth-child(4n+3){background:#E0FAF5;border-top-color:#2DD4BF}
+.stat:nth-child(4n+4),.stat-card:nth-child(4n+4){background:#FFF6D6;border-top-color:#FFC93C}
+.icon-mint{background:#2DD4BF!important;color:#fff!important}
+.icon-blue{background:#2F6BFF!important;color:#fff!important}
+.icon-gold{background:#F5A30F!important;color:#fff!important}
+.stat-value,.stat-card .value{color:#1E4FD6}
+.stat-value.gold,.stat-card .value.gold{color:#F5A30F}
+
+.panel{border:1px solid #DCE8F7;border-top:4px solid #2F6BFF;box-shadow:0 8px 20px -16px rgba(30,58,138,.45)}
+.panel h2,.panel-head h3,.panel h3{color:#1E3A8A}
+.heading-icon{color:#2F6BFF}
+thead,.panel thead{background:#EAF3FF}
+th,.panel th{color:#3F55A8}
+tbody tr:hover,.panel tbody tr:hover{background:#F3F7FF}
+.badge.proses{background:#DCEBFF;color:#1D5FD6}
+.badge.selesai{background:#D5F8EE;color:#047857}
+.badge.menunggu{background:#FFF0BF;color:#B45309}
+
+.btn,.btn-dark{background:#2F6BFF!important;color:#fff!important;border:0;box-shadow:none}
+.btn:hover,.btn-dark:hover{background:#1E4FD6!important}
+.text-btn{background:#EAF3FF;border-color:#CFE0FA;color:#1E4FD6}
+.text-btn:hover{background:#2F6BFF;color:#fff}
+.btn-danger{background:#FFE3E6!important;color:#C2304A!important}
+.field input:focus,.field select:focus,.field textarea:focus,.status-select:focus{border-color:#2F6BFF;box-shadow:0 0 0 3px rgba(47,107,255,.16)}
+.field input[readonly],.field textarea[readonly]{background:#F3F7FF}
+.summary{background:#EAF3FF}
+.summary strong{color:#F5A30F}
+
+.quick-btn{border-width:1px}
+.quick-btn:nth-child(4n+1){background:#E6F6FF;border-color:#BFE3FA}
+.quick-btn:nth-child(4n+2){background:#EEF0FF;border-color:#D0D5FF}
+.quick-btn:nth-child(4n+3){background:#E0FAF5;border-color:#A9EBDD}
+.quick-btn:nth-child(4n+4){background:#FFF6D6;border-color:#FFE18A}
+.quick-icon{color:#2F6BFF}
+.promo{background:#EAF3FF!important;border:1px solid #CFE0FA!important}
+.promo p{color:#55648C}
+.thanks{background:#E6F6FF!important}
+
+/* ==========================================================================
+   LOGIN — semua bagian disamakan ke palet biru (+ kuning sebagai aksen)
+   ========================================================================== */
+/* Panel kiri */
+
+/* Panel form (kanan) */
+.auth-shell .auth-form-wrap{background:#F3F8FF}
+.auth-shell .form-heading h2{color:#1E3A8A}
+.auth-shell .form-heading p{color:#5B6F94}
+.auth-shell .auth-tabs{border:1px solid #D3E3FA;background:#E4EEFC}
+.auth-shell .auth-tabs button{color:#4C6490}
+.auth-shell .auth-tabs button:hover{color:#2F6BFF}
+.auth-shell .auth-tabs button.active{color:#1E4FD6;background:#fff;box-shadow:0 2px 8px rgba(47,107,255,.18)}
+.auth-shell .hint-box{border:1px solid #CFE0FA;color:#2A4FA8;background:#EAF3FF}
+.auth-shell .role-toggle span{border:1px solid #D3E3FA;color:#4C6490;background:#fff}
+.auth-shell .role-toggle input:checked + span{border-color:#2F6BFF;color:#1E4FD6;background:#E6EFFF;box-shadow:inset 0 0 0 1px rgba(47,107,255,.2)}
+.auth-shell .field label{color:#1E3A8A}
+.auth-shell .field input{border:1px solid #D3E3FA;color:#14244B;background:#fff}
+.auth-shell .field input::placeholder{color:#9AAAC6}
+.auth-shell .field input:focus{border-color:#2F6BFF;box-shadow:0 0 0 3px rgba(47,107,255,.16)}
+.auth-shell .btn.btn-dark.btn-block{border:1px solid #2F6BFF;color:#fff;background:#2F6BFF}
+.auth-shell .btn.btn-dark.btn-block:hover{background:#1E4FD6;border-color:#1E4FD6;box-shadow:0 8px 18px -8px rgba(47,107,255,.6)}
+.auth-shell .form-note{color:#6B7FA0}
+.auth-shell .form-note a{color:#2F6BFF}
+.auth-shell .form-divider{color:#9AAAC6}
+.auth-shell .form-divider::before,.auth-shell .form-divider::after{background:#DCE8F7}
+.auth-shell .auth-bottom{color:#8A9BB8}
+/* pesan error tetap merah (penanda salah), tapi disesuaikan lembut */
+.auth-shell .error-box{border:1px solid #F6C9CF;color:#B02A40;background:#FFF0F2}
+
+
+/* ==========================================================================
+   VERSI LEMBUT — mengikuti warna beranda (biru langit muda + tulisan biru tua)
+   ========================================================================== */
+/* Login: panel kiri */
+.auth-side{background:#DCEBFF!important}
+.auth-shell .brand,.auth-shell .brand-name{color:#1E3A8A}
+.auth-shell .logo-mark{color:#2F6BFF}
+.auth-shell .brand-tagline{color:#5B6F94}
+.auth-shell .eyebrow{border:1px solid #BCD4F5;color:#1E4FD6;background:#fff}
+.auth-shell .eyebrow-dot{background:#2F6BFF}
+.auth-shell .auth-quote h1{color:#1E3A8A}
+.auth-shell .auth-quote h1 span{color:#2F6BFF}
+.auth-shell .auth-quote p{color:#4C6490}
+.auth-shell .laundry-card{border:1px solid #C9DCF7;background:rgba(255,255,255,.7)}
+.auth-shell .laundry-icon{color:#2F6BFF;background:#E4F0FF}
+.auth-shell .laundry-card strong{color:#1E3A8A}
+.auth-shell .laundry-card p{color:#5B6F94}
+.auth-shell .side-footer{color:#7C8FB0}
+
+/* Sidebar user & admin */
+.sidebar{background:#E3EFFF!important;border-right:1px solid #CFE0FA}
+.sidebar::after{content:none!important}
+.sidebar .brand,.sidebar .brand-text,.sidebar .brand-name,.sidebar .name,.side-user .name{color:#1E3A8A!important}
+.sidebar .brand-logo,.sidebar .logo-mark{color:#2F6BFF}
+.nav-btn,.nav-item{color:#35508F!important}
+.nav-btn:hover,.nav-item:hover{background:rgba(47,107,255,.10)!important;color:#1E4FD6!important}
+.nav-btn.active,.nav-item.active{background:#fff!important;color:#1E4FD6!important;font-weight:700;box-shadow:0 4px 12px -6px rgba(30,58,138,.35)}
+.sidebar .avatar{background:#2F6BFF!important;color:#fff!important}
+.user-role,.side-user .role{color:#5B6F94!important}
+.sidebar-bottom,.side-user{border-color:#CFE0FA!important}
+.logout,.logout-link{color:#2F6BFF!important}
+.logout:hover,.logout-link:hover{color:#1E4FD6!important}
+
+/* Kartu & panel dashboard dibuat lebih tipis */
+.stat,.stat-card{border-top-width:3px}
+.panel{border:1px solid #DCE8F7;box-shadow:0 6px 16px -14px rgba(30,58,138,.4)}
+
+/* ==========================================================================
+   PERBAIKAN KETERBACAAN TEKS
+   ========================================================================== */
+/* Label kecil di atas judul seksi (DAFTAR HARGA, CARA KERJA, dst.) */
+.section-head .kicker,#daftar-harga .section-head .kicker{background:#DCEBFF;color:#1E4FD6;border:1px solid #BCD4F5}
+/* Nama pengguna di sidebar dashboard */
+.sidebar{color:#1E3A8A}
+.user-info,.user-name{color:#1E3A8A!important}
+.user-role{color:#5B6F94!important}
+.sidebar .brand-name{color:#1E3A8A!important}
+
+/* ==========================================================================
+   FOOTER — ungu lembut (lavender), serasi dengan biru
+   ========================================================================== */
+body .lunora-footer{background:#E9E6FF;color:#312E81}
+body .lunora-footer::before{background:rgba(99,102,241,.10)}
+body .lunora-footer .brand,body .lunora-footer .brand-name{color:#312E81}
+body .lunora-footer .logo-mark{color:#6366F1}
+body .lunora-footer .brand-tagline{color:#5B5A8F}
+body .footer-description{color:#4A4880}
+body .lunora-footer h3{color:#312E81}
+body .footer-heading-icon{color:#6366F1}
+body .footer-socials a{color:#4F46E5;background:rgba(99,102,241,.14)}
+body .footer-socials a:hover{background:#6366F1;color:#fff}
+body .contact-icon{color:#4F46E5;background:rgba(99,102,241,.14)}
+body .contact-item strong{color:#4F46E5}
+body .contact-item a,body .contact-item p{color:#3F3D7A}
+body .contact-item a:hover{color:#1E1B6B}
+body .footer-map{border:1px solid rgba(99,102,241,.3);background:#F3F1FF}
+body .map-button{color:#312E81;background:rgba(99,102,241,.14)}
+body .map-button:hover{background:#6366F1;color:#fff}
+body .map-note{color:#5B5A8F}
+body .footer-navigation,body .footer-account{border-left:1px solid rgba(99,102,241,.22)}
+body .footer-navigation a,body .footer-account a{color:#3F3D7A}
+body .footer-navigation a:hover,body .footer-account a:hover{color:#4F46E5}
+body .footer-navigation a span,body .footer-account a span{color:#6366F1}
+body .footer-bottom{border-top:1px solid rgba(99,102,241,.22)}
+body .footer-bottom p,body .footer-bottom span{color:#5B5A8F}
+
+/* Label nama pada peta (menutup kartu bawaan Google) */
+.footer-map{position:relative}
+.map-label{position:absolute;top:10px;left:10px;z-index:2;box-sizing:border-box;width:min(310px,calc(100% - 20px));height:94px;padding:14px 16px;background:#fff;border-radius:10px;box-shadow:0 2px 10px rgba(49,46,129,.25);display:flex;flex-direction:column;justify-content:center;gap:4px;pointer-events:none}
+.map-label strong{font-size:1.05rem;color:#312E81}
+.map-label span{font-size:.82rem;color:#5B5A8F;line-height:1.35}
+
+
+/* Warna stiker hero Lunora */
+.hero-sticky-note {
+    background: #EAE4FF;
+    color: #6552A5;
+    box-shadow: 0 12px 25px rgba(101, 82, 165, 0.13);
+}
+
+.hero-sticky-note svg {
+    color: #E875A2;
+}
+
